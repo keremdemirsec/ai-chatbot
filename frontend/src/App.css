@@ -1,0 +1,135 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.header {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.chat-box {
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    max-width: 80%;
+    transition: transform 0.3s ease;
+}
+
+.user {
+    background-color: #007bff;
+    color: #fff;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.bot {
+    background-color: #6c757d;
+    color: #fff;
+    margin-right: auto;
+}
+
+.message:last-child {
+    animation: slide-up 0.3s ease forwards;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top: 4px solid #4caf50;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+.loading-text {
+    margin-left: 10px;
+    color: #fff;
+}
+
+.input-area {
+    display: flex;
+    padding: 15px;
+    background-color: #444;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: #333;
+    color: #fff;
+}
+
+.input-area button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #444;
+    color: #fff;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
